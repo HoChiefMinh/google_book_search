@@ -1,21 +1,9 @@
 import React from 'react';
 import './App.css';
+import SearchForm from './components/SearchForm.js';
 
-const App = () => {
-  return (
-    <section>
-      <form>
-        <label> 
-          <span>Search for books</span>
-          <input
-            type='search'
-            placeholder='Insert Book'
-          />
-          <button type='submit'>Search</button>
-        </label>
-      </form>
-    </section>
-  );
+function App () {
+  return <SearchForm />;
 }
 
 export default App;
