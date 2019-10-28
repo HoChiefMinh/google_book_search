@@ -1,0 +1,10 @@
+.jumbotron{
+    margin-top: 10px;
+    /* background-image: url('https://zoomgirls.net/wallpapers/anri-okita-1280x720.jpg'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center-top;
+    background-size: cover;
+    text-align: center;
+    height:200,
+}

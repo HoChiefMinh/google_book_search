@@ -1,21 +1,23 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Nav from './components/NavBs';
-import './App.css';
-import BookSearch from './pages/BookSearch';
-// import SearchForm from './components/SearchForm.js';
-// import { Navbar, Brand, Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Nav from './components/Nav';
+// import './App.css';
+import Search from './pages/Search';
+import Saved from './pages/Saved';
 
-
-function App () {
+function App() {
   return (
-    // <Router>
+    <Router>
       <div>
         <Nav />
-        <BookSearch />
+        <Switch>
+          <Route exact path='/' component={Search} />
+          <Route path='/saved' component={Saved} />
+          <Route component={404} />
+        </Switch>
       </div>
-    // </Router>
-    );
+    </Router>
+  );
 }
 
 export default App;
