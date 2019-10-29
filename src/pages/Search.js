@@ -51,18 +51,10 @@ class Search extends Component {
   render() {
     return (
       <Container fluid>
-        
-        {/* <div class='jumbotron jumbotron-fluid'>
-          <div class='container'>
-            <h1 class='display-4'>Google Book Search (React)</h1>
-            <p class='lead'>Look up a book</p>
-          </div>
-        </div> */}
-        
         <Jumbotron>
-          <div class='container'>
-            <h1 class='display-4'>Google Book Search (React)</h1>
-            <p class='lead'>Search for a book!</p>
+          <div className='container'>
+            <h1 className='display-4'>Google Book Search (React)</h1>
+            <p className='lead'>Search for a book!</p>
           </div>
         </Jumbotron>
         <Container>
@@ -72,9 +64,9 @@ class Search extends Component {
              <FormBtn>Submit</FormBtn> 
            </form>
         </Container>
-        <div class='card-body'>
+        <div className='card-body'>
 
-        <div class='card-body'>
+        <div className='card-body'>
 
         </div>
         </div>
@@ -85,7 +77,7 @@ class Search extends Component {
 
 export default Search;
 
-// class SearchForm extends Component {
+// className SearchForm extends Component {
 //   // Setting the initial calues of this.state.username and this.state.username and this.state.password
 //   state = {
 //     search: ''

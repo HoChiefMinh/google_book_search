@@ -4,10 +4,11 @@ import Nav from './components/Nav';
 // import './App.css';
 import Search from './pages/Search';
 import Saved from './pages/Saved';
+import NoMatch from './pages/NoMatch';
 
 //cannot get api key to log
-const API_KEY =`${process.env.REACT_APP_API_KEY}`
-console.log(API_KEY);
+// const API_KEY =`${process.env.REACT_APP_API_KEY}`
+// console.log(API_KEY);
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Search} />
           <Route path='/saved' component={Saved} />
-          <Route component={404} />
+          <Route component={NoMatch} />
         </Switch>
       </div>
     </Router>

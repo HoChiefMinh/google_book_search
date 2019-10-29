@@ -1,6 +1,6 @@
 import axios from 'axios';
-const BASEURL = 'https://www.googleapis.com/books/v1/volumes?q=';
-// const APIKEY = 'process.env.REACT_APP_API_KEY';
+const BASEURL = 'https://www.googleapis.com/books/v1/volumes?q=${API_KEY}';
+const API_KEY = 'process.env.REACT_APP_API_KEY';
 
 export default {
     // searches NYT books according to the search criteria given in the form
