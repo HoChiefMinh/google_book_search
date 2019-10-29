@@ -5,6 +5,10 @@ import Nav from './components/Nav';
 import Search from './pages/Search';
 import Saved from './pages/Saved';
 
+//cannot get api key to log
+const API_KEY =`${process.env.REACT_APP_API_KEY}`
+console.log(API_KEY);
+
 function App() {
   return (
     <Router>
