@@ -1,11 +1,11 @@
 import axios from 'axios';
-const BASEURL = 'https://www.googleapis.com/books/v1/volumes?q=${API_KEY}';
+const BASEURL = 'https://www.googleapis.com/books/v1/volumes?q=';
 const API_KEY = 'process.env.REACT_APP_API_KEY';
 
 export default {
     // searches NYT books according to the search criteria given in the form
     getNewBooks: function(title) {
-        return axios.get(BASEURL + title);
+        return axios.get(BASEURL + title + API_KEY);
     },
 
     // gets saved books

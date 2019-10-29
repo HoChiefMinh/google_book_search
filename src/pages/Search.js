@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-// import { Link, Redirent } from 'react-router-dom';
+// import axios from 'axios';
 import API from '../utils/API';
-import { Container } from '../components/Grid';
+import { Col, Row, Container } from '../components/Grid';
 import Jumbotron from '../components/Jumbotron';
 import { Input, FormBtn } from '../components/Form';
+// import List from '../components/List';
 
 class Search extends Component {
   state = {
@@ -31,9 +32,9 @@ class Search extends Component {
   };
 
   // handles any changes to the input fields
-  handleInputChanges = event => {
+  handleInputChanges = (e) => {
     // Pull the name and value properties off of the event.target (the element which triggerd the event)
-    const { name, value } = event.target;
+    const { name, value } = (e).target;
 
     //Set the state for the appropriate input field
     this.setState({
@@ -42,8 +43,8 @@ class Search extends Component {
   };
 
   //When form is submitted, prevent the default event and alert the search
-  handleFormSubmit = event => {
-    event.preventDefault();
+  handleFormSubmit = (e) => {
+    (e).preventDefault();
     alert(`Search: ${this.state.search}`);
     this.setState({ search: '' });
   };
@@ -59,17 +60,13 @@ class Search extends Component {
         </Jumbotron>
         <Container>
           <h3>Books Search</h3>
-           <form>
-             <Input name='books' placeholder='Title of Book (Required)' />
-             <FormBtn>Submit</FormBtn> 
-           </form>
+          <form>
+            <Input name='books' placeholder='Title of Book (Required)' />
+            <FormBtn>Submit</FormBtn>
+          </form>
         </Container>
-        <div className='card-body'>
-
-        <div className='card-body'>
-
-        </div>
-        </div>
+        
+        <div className='card-body'>{/* <List></List> /> */}</div>
       </Container>
     );
   }
@@ -83,7 +80,7 @@ export default Search;
 //     search: ''
 //   };
 
-//   
+//
 
 //   render() {
 //     return (
